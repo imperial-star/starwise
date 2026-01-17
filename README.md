@@ -7,6 +7,7 @@
 
 - Rename ImpExtra.kt.example to ImpExtra.kt
 - You can collect
+- Create google-services in Firebase (org.gua.imper)
 
 ## Other
 
