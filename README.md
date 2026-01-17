@@ -6,8 +6,10 @@
 ## Instructions for building the application
 
 - Rename ImpExtra.kt.example to ImpExtra.kt
-- You can collect
+- Fill in ImpExtra.kt
 - Create google-services in Firebase (org.gua.imper)
+- Replace google-services
+- You can collect
 
 ## License
 
