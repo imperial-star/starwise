@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Starwise</string>
+
+    <!-- MainActivity -->
+    <string name="my_roadmaps">My Roadmaps</string>
+    <string name="info">Info</string>
+    <string name="settings">Settings</string>
+    <string name="create_roadmap">Create roadmap</string>
+    <string name="no_roadmaps_prompt"><![CDATA[You don\'t have any roadmaps yet.]]></string>
+    <string name="delete_confirmation_title">Confirm deletion</string>
+    <string name="delete_confirmation_text">Are you sure you want to delete the roadmap \"%s\"? This action is irreversible.</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete_roadmap">Delete roadmap</string>
+
+    <!-- AppSettings -->
+    <string name="back">Back</string>
+    <string name="use_custom_api_key">Use your own API key</string>
+    <string name="your_gemini_api_key">Your Gemini API key</string>
+    <string name="key_saved">Key saved</string>
+    <string name="save">Save</string>
+
+    <!-- MapSettings -->
+    <string name="creating_please_wait">Please wait</string>
+    <string name="roadmap_name">Roadmap name</string>
+    <string name="short_description">Short description</string>
+    <string name="gemini_topic">Topic for Gemini</string>
+    <string name="gemini_refinement">Refinement for Gemini</string>
+    <string name="create_and_save">Create and save</string>
+    <string name="api_key_not_found">API key not found. Please add it in Settings.</string>
+
+    <!-- WebViewActivity -->
+    <string name="roadmap">Roadmap</string>
+</resources>

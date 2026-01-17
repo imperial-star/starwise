@@ -1,0 +1,6 @@
+package org.gua.imper
+
+object ImpExtra {
+    // https://aistudio.google.com/api-keys
+    const val API_GEMINI = "You_API_Gemini"
+}

@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Мудрая Звезда</string>
+
+    <!-- MainActivity -->
+    <string name="my_roadmaps">Мои роадмапы</string>
+    <string name="info">Инфо</string>
+    <string name="settings">Настройки</string>
+    <string name="create_roadmap">Создать роадмап</string>
+    <string name="no_roadmaps_prompt"><![CDATA[У вас пока нет роадмапов.]]></string>
+    <string name="delete_confirmation_title">Подтвердите удаление</string>
+    <string name="delete_confirmation_text">Вы уверены, что хотите удалить роадмап \"%s\"? Это действие необратимо.</string>
+    <string name="delete">Удалить</string>
+    <string name="cancel">Отмена</string>
+    <string name="delete_roadmap">Удалить роадмап</string>
+
+    <!-- AppSettings -->
+    <string name="back">Назад</string>
+    <string name="use_custom_api_key">Использовать свой API-ключ</string>
+    <string name="your_gemini_api_key">Ваш API ключ Gemini</string>
+    <string name="key_saved">Ключ сохранен</string>
+    <string name="save">Сохранить</string>
+
+    <!-- MapSettings -->
+    <string name="creating_please_wait">Пожалуйста, подождите</string>
+    <string name="roadmap_name">Название роадмапа</string>
+    <string name="short_description">Краткое описание</string>
+    <string name="gemini_topic">Тема для Gemini</string>
+    <string name="gemini_refinement">Уточнение для Gemini</string>
+    <string name="create_and_save">Создать и сохранить</string>
+    <string name="api_key_not_found">API-ключ не найден. Добавьте его в Настройках.</string>
+
+    <!-- WebViewActivity -->
+    <string name="roadmap">Роадмап</string>
+</resources>
