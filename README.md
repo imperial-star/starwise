@@ -9,6 +9,10 @@
 - You can collect
 - Create google-services in Firebase (org.gua.imper)
 
+## License
+
+- GNU GPL v2
+
 ## Other
 
 - tonkeeper : UQBCM47byBepVUDLU9tWaRmgURoB13lQBRc-31V27DLnHPi3
