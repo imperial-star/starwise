@@ -1,16 +1,18 @@
 
 ![banner](https://raw.githubusercontent.com/oxxx1mif/oxxx1mif/main/imp_starwise.jpg)
+
 # Starwise
 
 [![Channel](https://img.shields.io/badge/Channel-Telegram-blue.svg)](https://t.me/GuAmain)
 [![Chat](https://img.shields.io/badge/Chat-Telegram-blue.svg)](https://t.me/GuAgchat)
 
-
+Readme EN | [Readme RU](https://github.com/imperial-star/starwise/blob/main/README_RU.md)
 
 ## Info
 
 - Android v. : 10.x.x
 - Description : AI-powered roadmap creation service
+
 ## License
 
 - [GNU GPL V.2](https://github.com/imperial-star/starwise/blob/main/LICENSE)
