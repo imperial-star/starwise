@@ -6,6 +6,7 @@
 ## Instructions for building the application
 
 - Rename ImpExtra.kt.example to ImpExtra.kt
+- Fill in all required fields in ImpExtra
 - You can collect
 
 ## Other
