@@ -1,19 +1,12 @@
 ## Starwise
 
-- Android v. : 7.x.x
+- Android v. : 10.x.x
 - Description : AI-powered roadmap creation service
 
 ## Instructions for building the application
 
 - Rename ImpExtra.kt.example to ImpExtra.kt
-- Fill in ImpExtra.kt
-- Create google-services in Firebase (org.gua.imper)
-- Replace google-services
 - You can collect
-
-## License
-
-- GNU GPL v2
 
 ## Other
 

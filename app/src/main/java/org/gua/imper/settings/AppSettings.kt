@@ -1,5 +1,5 @@
 /*
- * This is the source code of Starwise for Android v. 7.x.x.
+ * This is the source code of Starwise for Android v. 10.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
@@ -18,11 +18,14 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import org.gua.imper.AiModel
 import org.gua.imper.R
 import org.gua.imper.SettingsManager
 import org.gua.imper.ui.theme.ImperTheme
@@ -44,6 +47,8 @@ fun SettingsScreen() {
     val context = LocalContext.current
     var useCustomKey by remember { mutableStateOf(SettingsManager.shouldUseCustomApiKey(context)) }
     var apiKey by remember { mutableStateOf(SettingsManager.getApiKey(context) ?: "") }
+    var selectedModel by remember { mutableStateOf(SettingsManager.getSelectedAiModel(context)) }
+    var isDropdownExpanded by remember { mutableStateOf(false) }
 
     Scaffold(
         topBar = {
@@ -63,6 +68,40 @@ fun SettingsScreen() {
                 .padding(paddingValues)
                 .padding(16.dp)
         ) {
+            Text(stringResource(id = R.string.choose_ai_model))
+            Spacer(modifier = Modifier.height(8.dp))
+            ExposedDropdownMenuBox(
+                expanded = isDropdownExpanded,
+                onExpandedChange = { isDropdownExpanded = it }
+            ) {
+                OutlinedTextField(
+                    value = selectedModel.name,
+                    onValueChange = {},
+                    readOnly = true,
+                    trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = isDropdownExpanded) },
+                    modifier = Modifier
+                        .menuAnchor()
+                        .fillMaxWidth()
+                )
+                ExposedDropdownMenu(
+                    expanded = isDropdownExpanded,
+                    onDismissRequest = { isDropdownExpanded = false }
+                ) {
+                    AiModel.entries.forEach { model ->
+                        DropdownMenuItem(
+                            text = { Text(model.name) },
+                            onClick = {
+                                selectedModel = model
+                                SettingsManager.setSelectedAiModel(context, model)
+                                isDropdownExpanded = false
+                            }
+                        )
+                    }
+                }
+            }
+
+            Spacer(modifier = Modifier.height(24.dp))
+
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically,
@@ -71,7 +110,7 @@ fun SettingsScreen() {
                 Text(stringResource(id = R.string.use_custom_api_key))
                 Switch(
                     checked = useCustomKey,
-                    onCheckedChange = { 
+                    onCheckedChange = {
                         useCustomKey = it
                         SettingsManager.setUseCustomApiKey(context, it)
                     }
@@ -93,7 +132,6 @@ fun SettingsScreen() {
                         SettingsManager.saveApiKey(context, apiKey)
                         Toast.makeText(context, context.getString(R.string.key_saved), Toast.LENGTH_SHORT).show()
                     }
-                    (context as? Activity)?.finish()
                 },
                 enabled = useCustomKey
             ) {

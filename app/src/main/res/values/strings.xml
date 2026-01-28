@@ -16,16 +16,17 @@
     <!-- AppSettings -->
     <string name="back">Back</string>
     <string name="use_custom_api_key">Use your own API key</string>
-    <string name="your_gemini_api_key">Your Gemini API key</string>
+    <string name="your_gemini_api_key">Your API key</string>
     <string name="key_saved">Key saved</string>
     <string name="save">Save</string>
+    <string name="choose_ai_model">Choose AI Model</string>
 
     <!-- MapSettings -->
     <string name="creating_please_wait">Please wait</string>
     <string name="roadmap_name">Roadmap name</string>
     <string name="short_description">Short description</string>
-    <string name="gemini_topic">Topic for Gemini</string>
-    <string name="gemini_refinement">Refinement for Gemini</string>
+    <string name="gemini_topic">Topic for AI</string>
+    <string name="gemini_refinement">Refinement for AI</string>
     <string name="create_and_save">Create and save</string>
     <string name="api_key_not_found">API key not found. Please add it in Settings.</string>
 

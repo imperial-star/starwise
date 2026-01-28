@@ -17,6 +17,4 @@ local.properties
 .idea
 app/release
 app/proguard-rules.pro
-app/src/main/org/gua/imper/ImpExtra.kt
-gradle.properties
 app/src/main/java/org/gua/imper/ImpExtra.kt

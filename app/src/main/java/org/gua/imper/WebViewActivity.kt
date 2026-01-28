@@ -1,11 +1,10 @@
 /*
- * This is the source code of Starwise for Android v. 7.x.x.
+ * This is the source code of Starwise for Android v. 10.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Gleb Obitocjkiy, 2026.
  */
-
 package org.gua.imper
 
 import android.app.Activity

@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     id("com.google.gms.google-services")
+    id("com.chaquo.python")
 }
 
 android {
@@ -15,10 +16,14 @@ android {
         applicationId = "org.gua.imper"
         minSdk = 29
         targetSdk = 36
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2
+        versionName = "1.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            abiFilters += listOf("arm64-v8a", "x86_64", "armeabi-v7a")
+        }
     }
 
     buildTypes {
@@ -31,11 +36,12 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        isCoreLibraryDesugaringEnabled = true
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "17"
     }
     buildFeatures {
         compose = true
@@ -43,9 +49,31 @@ android {
     packagingOptions {
         resources.excludes.add("/META-INF/{AL2.0,LGPL2.1}")
     }
+
+    applicationVariants.all {
+        if (buildType.name == "release") {
+            outputs.all {
+                val output = this as com.android.build.gradle.internal.api.BaseVariantOutputImpl
+                val project = "starwise-universal"
+                val buildTypeName = buildType.name
+                val versionName = defaultConfig.versionName
+                val versionCode = defaultConfig.versionCode
+                output.outputFileName = "$project-$buildTypeName-$versionName-$versionCode.apk"
+            }
+        }
+    }
+}
+
+chaquopy {
+    defaultConfig {
+        pip {
+            install("gigachat")
+        }
+    }
 }
 
 dependencies {
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -71,4 +99,6 @@ dependencies {
     implementation("io.ktor:ktor-client-okhttp:2.3.9")
     implementation("io.ktor:ktor-client-content-negotiation:2.3.9")
     implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.9")
+    implementation("chat.giga:gigachat-java:0.1.11")
+    implementation("com.squareup.okhttp3:okhttp:4.10.0")
 }

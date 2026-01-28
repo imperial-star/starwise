@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">StarWise</string>
+
+    <!-- MainActivity -->
+    <string name="my_roadmaps">我的路线图</string>
+    <string name="info">信息</string>
+    <string name="settings">设置</string>
+    <string name="create_roadmap">创建路线图</string>
+    <string name="no_roadmaps_prompt"><![CDATA[您目前没有任何路线图。]]></string>
+    <string name="delete_confirmation_title">确认删除</string>
+    <string name="delete_confirmation_text">您确定要删除路线图“%s”吗？此操作不可逆。</string>
+    <string name="delete">删除</string>
+    <string name="cancel">取消</string>
+    <string name="delete_roadmap">删除路线图</string>
+
+    <!-- AppSettings -->
+    <string name="back">返回</string>
+    <string name="use_custom_api_key">使用您的 API 密钥</string>
+    <string name="your_gemini_api_key">您的 API 密钥</string>
+    <string name="key_saved">密钥已保存</string>
+    <string name="save">保存</string>
+    <string name="choose_ai_model">选择 AI 模型</string>
+
+    <!-- MapSettings -->
+    <string name="creating_please_wait">请稍候</string>
+    <string name="roadmap_name">路线图名称</string>
+    <string name="short_description">简短描述</string>
+    <string name="gemini_topic">AI 主题</string>
+    <string name="gemini_refinement">AI 优化</string>
+    <string name="create_and_save">创建并保存</string>
+    <string name="api_key_not_found">​​未找到 API 密钥。请在设置中添加。</string>
+
+    <!-- WebViewActivity -->
+
+    <string name="roadmap">路线图</string>
+</resources>
